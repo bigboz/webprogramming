@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>HTML New Semantic Elements</h1>
+            <h2>Examples of HTML5</h2>
+        </hgroup>
+    </header>
+
+    <!-- navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- article -->
+    <article>
+        <header>
+            <time>
+                <span>Jan</span> 16
+            </time>
+            <h1>Article Header</h1>
+        </header>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make 
+            a type specimen book. It has survived not only five centuries, 
+            but also the leap into electronic typesetting, remaining essentially unchanged. 
+            It was popularised in the 1960s with the release of Letraset sheets containing 
+            Lorem Ipsum passages, and more recently with desktop publishing software like 
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+            <section>
+                <h3>This is a section heading</h3>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, 
+                    sometimes on purpose (injected humour and the like).</p>
+            </section>
+    </article>
+
+    <form>
+        Range your skill : 
+        <input type="range">
+    </form>
+
+    <br>
+
+    <!-- link to canvas -->
+    <h3>I made many shapes by canvas tag <a href="canvas.html">click</a></h3>
+    <br>
+
+    <!-- audio -->
+    <audio controls autoplay>
+        <source src="https://bigboz.github.io/webprogramming/imsotried.mp3" type="audio/mp3"/>
+        Your browser does not support the element.
+    </audio>
+
+    <br>
+
+    <!-- video -->
+    <video controls autobuffer width="300" height="200" poster="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwirz7uy-4HgAhUBU30KHdQFA5UQjRx6BAgBEAU&url=http%3A%2F%2Fkpoplove.koreadaily.com%2Fministry-investigation-singer-nilo-update%2F&psig=AOvVaw2xLI6TucdvHt7_7vENk7R-&ust=1548266246047740">
+        <source src="https://bigboz.github.io/webprogramming/imsotried.mp4" type="video/mp4"/>
+        Your browser does not support the element.
+    </video>
+    
+    <br>
+
+    <!-- SVG -->
+    <svg height="150" width="400">
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" 
+      y2="0%">
+            <stop offset="0%" style=“stop-color:rgb(255,255,0); 
+      stop-opacity:1" />
+            <stop offset="100%" style=“stop-color:rgb(255,0,0); 
+      stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" 
+      fill="url(#grad1)" />
+      </svg>
+
+    <br>
+
+    <!-- progress -->
+
+    <progress value="59" max="100"></progress>
+
+
+
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2019 477-302 bWeb programming. All rights reserved.</p>
+    </footer>
+</body>
+</html>
