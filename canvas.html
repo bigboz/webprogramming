@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://bigboz.github.io/webprogramming/main.css" />
     <title>Canvas</title>
 </head>
 <body>
-    
+    <h1>Canvas's Elements</h1>
+    <!-- Draw a line -->
+    <h3>Draw a line</h3>
     <canvas id="myCanvas" width="200" height="100" 
     style="border:1px solid #000000;">
         Your browser does not support the HTML5 canvas tag.
@@ -20,12 +23,28 @@
         ctx.stroke();
     </script>
     <br>
-        
-    <canvas id="myCanvas1" width="200" height="100">
+
+    <!-- Draw a circle -->
+    <h3>Draw a Circle</h3>
+    <canvas id="myCanvas1" width="200" height="100" style="border:1px solid #000000;">
         Your browser does not support the HTML5 canvas tag.
     </canvas>
     <script>
         var c = document.getElementById("myCanvas1");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+    </script>
+    <br>
+        
+    <!-- Draw linear gradient -->
+    <h3>Draw linear gradient</h3>
+    <canvas id="myCanvas2" width="200" height="100">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <script>
+        var c = document.getElementById("myCanvas2");
         var ctx = c.getContext("2d");
 
         // Create gradient
@@ -39,17 +58,48 @@
     </script>
     <br>
 
+    <!-- Draw circular gradient -->
+    <h3>Draw circular gradient</h3>
     <canvas id="myCanvas3" width="200" height="100" style="border:1px solid #000000;">
-        Your browser does not support the HTML5 canvas tag.
+       Your browser does not support the HTML5 canvas tag.
     </canvas>
     <script>
         var c = document.getElementById("myCanvas3");
         var ctx = c.getContext("2d");
-        ctx.beginPath();
-        ctx.arc(95,50,40,0,2*Math.PI);
-        ctx.stroke();
+        // Create gradient
+        var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10,10,150,80);
     </script>
+    <br>
 
-    <h5><a href="https://bigboz.github.io/webprogramming/index.html">Back</a></h5>
+    <!-- Draw an image -->
+    <h3>Draw an image</h3>
+
+    <p>Image to use:</p>
+    <img id="logo" width="600px" height="300px" src="logo.png" alt="The Tree">
+
+    <p>Canvas:</p>
+    <canvas id="myCanvas4" width="1280px" height="720px" style="border:1px solid #d3d3d3;">Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <script>
+        window.onload = function() {
+        var canvas = document.getElementById("myCanvas4");
+        var ctx = canvas.getContext("2d");
+        var img = document.getElementById("logo");
+        ctx.drawImage(img, 0, 0);
+    };
+    </script>
+    <br>
+
+    <h5><a href="index.html">Back</a></h5>
+
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2019 477-302 Web programming. All rights reserved.</p>
+    </footer>
 </body>
 </html>
