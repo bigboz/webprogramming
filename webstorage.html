@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bigboz.github.io/webprogramming/main.css">
+    <title>Web Storage</title>
+
+    <script>
+            function clickCounter1() {
+              if (typeof(Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                  localStorage.clickcount = Number(localStorage.clickcount)+1;
+                } else {
+                  localStorage.clickcount = 1;
+                }
+                document.getElementById("result1").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+              } else {
+                document.getElementById("result1").innerHTML = "Sorry, your browser does not support web storage...";
+              }
+            }
+
+            function clickCounter2() {
+                if (typeof(Storage) !== "undefined") {
+                    if (sessionStorage.clickcount) {
+                        sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                    } else {
+                        sessionStorage.clickcount = 1;
+                    }
+                    document.getElementById("result2").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+            } else {
+                document.getElementById("result2").innerHTML = "Sorry, your browser does not support web storage...";
+                }
+            }
+    </script>
+
+</head>
+<body>
+    <h1>The localStorage Object</h1>
+        <p><button class="button" onclick="clickCounter1()" type="button">Click me!</button></p>
+        <div id="result1"></div>
+        <p>Click the button to see the counter increase.</p>
+        <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>   
+    <br>
+    <h1>The sessionStorage Object</h1>
+        <p><button class="button" onclick="clickCounter2()" type="button">Click me!</button></p>
+        <div id="result2"></div>
+        <p>Click the button to see the counter increase.</p>
+        <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+
+        <br>
+        <br>
+        <h5><a class="button" href="https://bigboz.github.io/webprogramming/index.html">BACK</a></h5>
+</body>
+</html>
